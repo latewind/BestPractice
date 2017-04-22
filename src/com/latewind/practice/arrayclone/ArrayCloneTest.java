@@ -1,4 +1,4 @@
-package com.latewind.arrayclone;
+package com.latewind.practice.arrayclone;
 
 import java.util.ArrayList;
 

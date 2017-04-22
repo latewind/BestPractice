@@ -1,4 +1,4 @@
-package com.latewind.automata;
+package com.latewind.practice.automata;
 
 
 import java.util.regex.Pattern;

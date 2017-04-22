@@ -1,4 +1,4 @@
-package com.latewind.observer;
+package com.latewind.practice.observer;
 
 import java.util.Observable;
 

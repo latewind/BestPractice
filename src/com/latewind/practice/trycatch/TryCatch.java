@@ -1,4 +1,4 @@
-package com.latewind.trycatch;
+package com.latewind.practice.trycatch;
 
 public class TryCatch {
 	

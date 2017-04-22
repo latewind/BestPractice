@@ -1,4 +1,4 @@
-package com.latewind.pattern;
+package com.latewind.practice.pattern;
 
 public abstract class Car {
 
