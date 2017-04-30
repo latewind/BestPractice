@@ -11,8 +11,8 @@ new ArrayCloneTest().test();
 
 	}
 	public void test(){
-		ArrayList<Point> list1=new ArrayList<>();
-		ArrayList<Point> list2=new ArrayList<>();
+		ArrayList<Point> list1=new ArrayList<Point>();
+		ArrayList<Point> list2=new ArrayList<Point>();
 		Point point1=new Point(1, 1);
 		list1.add(point1);
 		list2.addAll(list1);
