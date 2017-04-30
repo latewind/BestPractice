@@ -1,37 +1,38 @@
 package com.latewind.practice.jvm;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class StaticDispatch {
-	static abstract class Human {
+
+
+	public void sayHello(Human guy) {
+		System.out.println("hello,guy£¡");
 	}
 
-	static class Man extends Human {
+	public void sayHello(Man guy) {
+		System.out.println("hello,gentleman£¡");
 	}
 
-	static class Woman extends Human {
+	public void sayHello(Woman guy) {
+		System.out.println("hello,lady£¡");
 	}
 
-	public void sayHello(
-	Human guy)
-	{
-System.out.println("hello,guy£¡");
+	public static void main(String[] args) {
+		Human man = new Man();
+		Human woman = new Woman();
+		StaticDispatch sr = new StaticDispatch();
+		sr.sayHello(man);
+		sr.sayHello(woman);
+		
+	}
 }
-	public void sayHello(
-	Man guy)
-	{
-System.out.println("hello,gentleman£¡");
+
+  class Human {
 }
-	public void sayHello(
-	Woman guy)
-	{
-System.out.println("hello,lady£¡");
+
+ class Man extends Human {
 }
-	public static void main(
-	String[]args)
-	{
-Human man=new Man();
-Human woman=new Woman();
-StaticDispatch sr=new StaticDispatch();
-sr.sayHello(man);
-sr.sayHello(woman);
-}
+
+ class Woman extends Human {
 }
