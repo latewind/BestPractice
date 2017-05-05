@@ -9,20 +9,22 @@ public class ProductQueue {
 	public synchronized void put(Product product) {
 		System.out.println(product.getName());
 		products.add(product);
-		notify();
+		notifyAll();
 	}
 
 	public synchronized Product get() {
 		try {
 			while (products.isEmpty()) {
 				wait();
-				break;
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		return products.remove(products.size() - 1);
 
+	}
+	public int getSize(){
+		return products.size();
 	}
 
 }

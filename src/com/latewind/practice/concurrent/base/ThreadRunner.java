@@ -8,12 +8,15 @@ public class ThreadRunner {
 		Consumer cb=new Consumer(queue);
 		Producer pa=new Producer(queue);
 		Producer pb=new Producer(queue);
-	
+//		Producer pc=new Producer(queue);
+		MonitorThread mt=new MonitorThread(queue);
 		
 		ThreadRunner.run(ca);
 		ThreadRunner.run(cb);
 		ThreadRunner.run(pa);
 		ThreadRunner.run(pb);
+//		ThreadRunner.run(pc);
+		ThreadRunner.run(mt);
 		
 		
 		

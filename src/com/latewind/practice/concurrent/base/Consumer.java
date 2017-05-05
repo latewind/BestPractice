@@ -13,12 +13,12 @@ public class Consumer extends BaseThread{
 		while(true){
 			
 			try {
-				Thread.sleep(random.nextInt(1000));
+				Thread.sleep(random.nextInt(2000));
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			
-			System.out.println("I get a :"+queue.get());
+			System.out.println(Thread.currentThread().getName()+"  I get a :"+queue.get());
 		}
 	}
 

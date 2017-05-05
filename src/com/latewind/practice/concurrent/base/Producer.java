@@ -15,7 +15,7 @@ public class Producer extends BaseThread{
 		
 		queue.put(new Product("product:"+count.incrementAndGet()+" by "+Thread.currentThread().getName()));
 		try {
-			Thread.sleep(random.nextInt(1000));
+			Thread.sleep(random.nextInt(2000));
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
