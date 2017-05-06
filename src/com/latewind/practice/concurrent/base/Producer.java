@@ -11,14 +11,15 @@ public class Producer extends BaseThread{
 
 	@Override
 	public void run() {
-		while(true){
 		
-		queue.put(new Product("product:"+count.incrementAndGet()+" by "+Thread.currentThread().getName()));
+		while(canRun){
+		int interTime=random.nextInt(INTERVAL_TIME);
 		try {
-			Thread.sleep(random.nextInt(2000));
+			Thread.sleep(interTime);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		queue.put(new Product("product:"+count.incrementAndGet()+" by "+Thread.currentThread().getName()+":"+interTime));
 			
 		}
 	}

@@ -10,10 +10,10 @@ public class Consumer extends BaseThread{
 
 	@Override
 	public void run() {
-		while(true){
+		while(canRun){
 			
 			try {
-				Thread.sleep(random.nextInt(2000));
+				Thread.sleep(random.nextInt(INTERVAL_TIME));
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
