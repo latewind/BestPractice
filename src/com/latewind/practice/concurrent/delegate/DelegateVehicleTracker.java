@@ -4,8 +4,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
 public class DelegateVehicleTracker {
 	public static int DYNAMIC_LOCATION=0;
 	public static int STATIC_LOCATION=1;
