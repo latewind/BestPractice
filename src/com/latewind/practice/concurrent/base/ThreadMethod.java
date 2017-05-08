@@ -1,4 +1,4 @@
-package com.latewind.practice.concurrent.state;
+package com.latewind.practice.concurrent.base;
 
 public class ThreadMethod {
 

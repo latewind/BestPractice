@@ -10,7 +10,6 @@ public class MonitorThread extends BaseThread {
 	private static MonitorThread monitorThread;
 	private MonitorThread(ProductQueue queue) {
 		super(queue);
-		init();
 	}
 	public static MonitorThread getInstance(ProductQueue queue){
 		if(monitorThread==null){
@@ -24,7 +23,7 @@ public class MonitorThread extends BaseThread {
 			
 	}
 	 
-	private void init() {
+	public void init() {
 		for (int i = 0; i < 3; i++) {
 			Consumer consumer = new Consumer(queue);
 			Producer producer = new Producer(queue);

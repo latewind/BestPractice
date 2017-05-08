@@ -5,7 +5,7 @@ public class ThreadRunner {
 	public static void main(String[] args) {
 		ProductQueue queue = new ProductQueue();
 		MonitorThread mt = MonitorThread.getInstance(queue);
-
+mt.init();
 		run(mt);
 		
 
