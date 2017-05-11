@@ -1,4 +1,4 @@
-package com.latewind.practice.concurrent;
+package com.latewind.practice.concurrent.container;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
