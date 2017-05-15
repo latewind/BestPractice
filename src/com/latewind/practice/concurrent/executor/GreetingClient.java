@@ -13,24 +13,20 @@ public class GreetingClient
    {
       String serverName = "localhost";
       int port = Integer.parseInt("12345");
-      try
-      {
+      try {
          System.out.println("C1:Connecting to " + serverName
                              + " on port " + port);
          Socket client = new Socket(serverName, port);
+
          System.out.println("C2:Just connected to "
                       + client.getRemoteSocketAddress());
-         OutputStream outToServer = client.getOutputStream();
-         DataOutputStream out =
-                       new DataOutputStream(outToServer);
- 
-         out.writeUTF("C3:Hello from "
-                      + client.getLocalSocketAddress());
-         InputStream inFromServer = client.getInputStream();
-         DataInputStream in =
-                        new DataInputStream(inFromServer);
-         System.out.println("C4:Server says " + in.readUTF());
-         client.close();
+         GreetingServer.send("C3:Hello from "
+                      + client.getLocalSocketAddress(),client);
+
+         System.out.println("C4:Server says " + GreetingServer.receive(client));
+
+
+          client.close();
       }catch(IOException e)
       {
          e.printStackTrace();
