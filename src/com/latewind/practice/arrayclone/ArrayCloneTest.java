@@ -18,6 +18,8 @@ new ArrayCloneTest().test();
 		list2.addAll(list1);
 		point1.setX(100);
 		System.out.println(list2);
+		//
+
 		
 		
 	}
