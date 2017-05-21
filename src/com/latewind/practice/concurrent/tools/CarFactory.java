@@ -1,12 +1,12 @@
 package com.latewind.practice.concurrent.tools;
 
+import com.latewind.practice.tools.Maths;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import com.latewind.practice.tools.Maths;
 
 public class CarFactory {
 	final int WORKER_COUNT=2;

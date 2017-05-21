@@ -1,7 +1,5 @@
 package com.latewind.practice.concurrent.base;
 
-import java.util.Random;
-
 public class Consumer extends BaseThread{
    
 	public Consumer(ProductQueue queue) {

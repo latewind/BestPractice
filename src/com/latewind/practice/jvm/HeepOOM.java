@@ -1,6 +1,5 @@
 package com.latewind.practice.jvm;
 
-import java.awt.List;
 import java.util.ArrayList;
 /**
  * VM Args : -verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8

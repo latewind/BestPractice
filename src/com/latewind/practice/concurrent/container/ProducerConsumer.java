@@ -1,10 +1,10 @@
 package com.latewind.practice.concurrent.container;
 
+import com.latewind.practice.concurrent.base.Product;
+
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-
-import com.latewind.practice.concurrent.base.Product;
 
 public class ProducerConsumer {
 	BlockingQueue<Product> queue = new LinkedBlockingQueue<>(100);
@@ -32,7 +32,7 @@ public class ProducerConsumer {
 		@Override
 		public void run() {
 			try {
-				while (true) {
+				while (!Thread.currentThread().isInterrupted()) {
 					Thread.sleep(random.nextInt(INTERVAL_TIME));
 					queue.put(new Product(Thread.currentThread().getName() + "_P"));
 					System.out.println();
@@ -49,7 +49,7 @@ public class ProducerConsumer {
 		@Override
 		public void run() {
 			try {
-				while (true) {
+				while (!Thread.currentThread().isInterrupted()) {
 					Thread.sleep(random.nextInt(INTERVAL_TIME));
 					System.out.println(queue.take() + Thread.currentThread().getName() + "_C");
 				}

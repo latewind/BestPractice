@@ -1,21 +1,18 @@
 package com.latewind.practice.jvm;
 
-import java.util.ArrayList;
-import java.util.Date;
-
 public class StaticDispatch {
 
 
 	public void sayHello(Human guy) {
-		System.out.println("hello,guy£¡");
+		System.out.println("hello,guyï¿½ï¿½");
 	}
 
 	public void sayHello(Man guy) {
-		System.out.println("hello,gentleman£¡");
+		System.out.println("hello,gentlemanï¿½ï¿½");
 	}
 
 	public void sayHello(Woman guy) {
-		System.out.println("hello,lady£¡");
+		System.out.println("hello,ladyï¿½ï¿½");
 	}
 
 	public static void main(String[] args) {

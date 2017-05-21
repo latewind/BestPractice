@@ -2,7 +2,6 @@ package com.latewind.practice.automata;
 
 
 import java.util.regex.Pattern;
-import java.util.Stack;
 
 
 public class RegexpDemo {

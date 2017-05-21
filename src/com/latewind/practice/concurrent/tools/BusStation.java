@@ -1,8 +1,8 @@
 package com.latewind.practice.concurrent.tools;
 
-import java.util.concurrent.Semaphore;
-
 import com.latewind.practice.tools.Maths;
+
+import java.util.concurrent.Semaphore;
 
 public class BusStation {
 	Toilet toilet = new Toilet();

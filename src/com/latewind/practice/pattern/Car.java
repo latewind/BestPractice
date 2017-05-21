@@ -6,11 +6,11 @@ public abstract class Car {
 		person.visit(this);
 	}
 	public void gogogo(){
-		System.out.println("ÉÏÂ·");
+		System.out.println("??·");
 	}
 	
 	public void refuse(){
-		System.out.println("²»ÄÜÉÏÂ·");
+		System.out.println("??????·");
 	}
 	
 	

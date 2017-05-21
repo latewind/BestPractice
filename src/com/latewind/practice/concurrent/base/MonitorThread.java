@@ -1,7 +1,5 @@
 package com.latewind.practice.concurrent.base;
 
-import java.awt.List;
-import java.util.Arrays;
 import java.util.LinkedList;
 
 public class MonitorThread extends BaseThread {

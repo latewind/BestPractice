@@ -13,11 +13,12 @@ public class ClassFileAnalysis {
 		new ClassFileAnalysis().print();
 	}
 	
-	public void print(){
-		List<Object> list=new ArrayList<Object>();
+	public void print() {
+		List<Object> list = new ArrayList<Object>();
 		System.out.println(sum(i, j));
-		
 	}
+		
+
 	private int sum(int v1,int v2){
 		
 		return v1+v2;
