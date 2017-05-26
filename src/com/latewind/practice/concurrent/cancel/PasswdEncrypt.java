@@ -5,6 +5,9 @@ import com.latewind.practice.tools.Maths;
 import java.util.concurrent.*;
 
 /**
+ * This Class will  execute ten encrypt task,
+ * if the task out of the time(in this example,the time is 1s) ,it will be canceled
+ * and
  * Created by Late Wind on 2017/5/20.
  */
 public class PasswdEncrypt {
@@ -34,6 +37,7 @@ public class PasswdEncrypt {
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (TimeoutException e) {
+            System.out.println("This task is timeout");
             e.printStackTrace();
         }finally {
             task.cancel(true);
