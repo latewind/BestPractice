@@ -16,9 +16,9 @@ public class Race {
 		}
 		System.out.println("Start Race");
 		long startTIme = System.currentTimeMillis();
-		start.countDown();
+		start.countDown();//信号量-1，开启
 		try {
-			end.await();
+			end.await();//等待，知道信号为0
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

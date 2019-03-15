@@ -31,7 +31,7 @@ public class BusStation {
 			try {
 				semaphore.acquire();
 				System.out.println(passenger.name + " Into the Toilent");
-				Thread.sleep(Maths.nextRandomInt(3000));
+				Thread.sleep(Maths.nextRandomInt(10000));
 				semaphore.release();
 				System.out.println(passenger.name + " I'm OK");
 			} catch (InterruptedException e) {
