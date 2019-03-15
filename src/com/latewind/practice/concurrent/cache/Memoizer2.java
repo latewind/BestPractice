@@ -12,7 +12,7 @@ public class Memoizer2<A, V> implements Computable<A, V> {
     }
 
     @Override
-    public V compute(A args) throws Exception {
+    public V compute(A args) throws InterruptedException {
         V result = cache.get(args);
         //多个线程走到为空的逻辑，会重复计算
         if (result == null) {
