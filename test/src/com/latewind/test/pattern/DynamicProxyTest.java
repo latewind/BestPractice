@@ -25,16 +25,20 @@ public class DynamicProxyTest {
     @Test
     public void test() throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException, NoSuchMethodException {
         String userDaoClazz = "com.latewind.pattern.structural.proxy.dynamic.UserDao";
+        //扫描得到DAO接口
         Class targetClazz = Class.forName(userDaoClazz);
+        //得到DAO方法
         Method getUserMethod = targetClazz.getMethod("getUser",null);
         HashMap<Method, MapperMethod> methodCache= new HashMap<>();
+        //dao method 和 Mapper映射关系 放到缓存里面
         methodCache.put(getUserMethod,new MapperMethod());
 
         MapperProxyFactory<?> factory = new MapperProxyFactory<>();
-        Object f = factory.getMapper(targetClazz,methodCache);
+        Object proxyDao = factory.getMapper(targetClazz,methodCache);
         System.out.println(targetClazz.getName());
 
-        UserDao userDao = (UserDao) f;
+        UserDao userDao = (UserDao) proxyDao;
+
         BusinessService businessService = BusinessService.class.newInstance();
         Field userfield = businessService.getClass().getField("userDao");
         userfield.setAccessible(true);
